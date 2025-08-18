@@ -84,3 +84,28 @@ class Server:
             'prev_page': page - 1 if page > 1 else None,
             'total_pages': total_pages
         }
+
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+
+        """
+        Deletion-resilient hypermedia pagination.
+        """
+
+        assert type(index) is int and index >= 0
+        assert type(page_size) is int and page_size > 0
+        assert index < len(self.__indexed_dataset)
+
+        data = []
+        current_index = index
+
+        while len(data) < page_size and current_index < len(self.__indexed_dataset):
+            if current_index in self.__indexed_dataset:
+                data.append(self.__indexed_dataset[current_index])
+            current_index += 1
+
+        return {
+            "index": index,
+            "data": data,
+            "page_size": len(data),
+            "next_index": current_index
+        }
