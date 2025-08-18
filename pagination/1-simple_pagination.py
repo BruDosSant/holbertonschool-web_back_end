@@ -24,7 +24,8 @@ ej- 1
 
 
 class Server:
-    """Server class to paginate a database of popular baby names.
+    """
+    Server class to paginate a database of popular baby names.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
@@ -32,7 +33,8 @@ class Server:
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """
+        Cached dataset
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
