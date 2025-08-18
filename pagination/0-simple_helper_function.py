@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 
-
 """
 Como organizar en paginas
 """
-
-
 
 def index_range(page: int, page_size: int) -> tuple:
 
