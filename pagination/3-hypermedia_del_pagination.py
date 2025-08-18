@@ -85,7 +85,7 @@ class Server:
             'total_pages': total_pages
         }
 
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
 
         """
         Deletion-resilient hypermedia pagination.
