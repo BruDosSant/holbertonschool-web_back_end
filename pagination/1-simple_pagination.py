@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+
+"""
+Ejercicio 1 clase para paginar una base de datos
+"""
+
+
 import csv
 import math
 from typing import List
