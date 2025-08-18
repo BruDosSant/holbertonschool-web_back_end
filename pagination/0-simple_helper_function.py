@@ -5,6 +5,20 @@ from typing import List
 
 
 """
+Como organizar en paginas
+"""
+
+
+def index_range(page: int, page_size: int) -> tuple:
+
+    """retorna tupla de inicio y fin"""
+
+    start = (page - 1) * page_size
+    end = page * page_size
+    return (start, end)
+
+
+"""
 ej- 1
 """
 
@@ -29,17 +43,16 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            pass
+        
+        """
+        Return a page of the dataset.
+        """
 
-"""
-Como organizar en paginas
-"""
+        assert type(page) is int and page > 0
+        assert type(page_size) is int and page_size > 0
 
+        start, end = index_range(page, page_size)
 
-def index_range(page: int, page_size: int) -> tuple:
+        dataset = self.dataset()
 
-    """retorna tupla de inicio y fin"""
-
-    start = (page - 1) * page_size
-    end = page * page_size
-    return (start, end)
+        return dataset[start:end]
