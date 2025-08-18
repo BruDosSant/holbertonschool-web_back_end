@@ -19,7 +19,7 @@ def index_range(page: int, page_size: int) -> tuple:
 
 
 """
-ej- 1
+Ejercicio 1 clase para paginar una base de datos
 """
 
 
