@@ -1,2 +1,2 @@
 //list documents un a collection
-db.collection.find
+db.collection.find({})
