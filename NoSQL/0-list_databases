@@ -1,3 +1,5 @@
+// comentario requerido, no se pa que porque pedia que fuera el header pero weno
+
 #!/usr/bin/env python3
 
 db.adminCommand('listDatabases')
