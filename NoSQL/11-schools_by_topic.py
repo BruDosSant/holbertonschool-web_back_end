@@ -11,5 +11,5 @@ def schools_by_topic(mongo_collection, topic):
     lista de escuelas por topic
     """
 
-    lista = mongo_collection.find({topic: topic})
+    lista = mongo_collection.find({"topics": topic})
     return list(lista)
