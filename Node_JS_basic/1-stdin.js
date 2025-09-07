@@ -1,4 +1,4 @@
-console.log('Welcome to Holberton School, what is your name?');
+console.log('Welcome to Holberton School, what is your name?\n');
 
 process.stdin.on("data", (data) => {
   const name = data.toString().trim();
@@ -6,5 +6,5 @@ process.stdin.on("data", (data) => {
 });
 
 process.stdin.on("exit", () => {
-  console.log('This important software is now closing');
+  console.log('This important software is now closing\n');
 })
