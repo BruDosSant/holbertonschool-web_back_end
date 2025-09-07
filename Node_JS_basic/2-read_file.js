@@ -31,7 +31,7 @@ function countStudents(path) {
   const total = Object.values(studentsByField).reduce(
     (acc, arr) => acc + arr.length,
     0,
-);
+    );
   console.log(`Number of students: ${total}`);
 
   for (const field in studentsByField) {
